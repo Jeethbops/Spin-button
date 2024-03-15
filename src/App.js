@@ -13,6 +13,7 @@ export class App extends Component {
     Change = () => {
         this.setState({ a : 0 })
     }
+    
 
     incer = () => {
         this.setState({ a: this.state.a + 1 })
