@@ -9,7 +9,6 @@ export class App extends Component {
     state = {
         a: 0
     }
-    
 
     Change = () => {
         this.setState({ a : 0 })
