@@ -1,12 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './header';
 import react, { Component, PureComponent } from "react";
-import Home from './home';
 import axios from "axios";
 import { useState } from 'react';
-import TableRow from './tablerow';
-// import InfoWrapper from './infowrapper';
 
 export class App extends Component {
 
