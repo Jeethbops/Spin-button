@@ -1,25 +1,65 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './header';
+import react, { Component, PureComponent } from "react";
+import Home from './home';
+import axios from "axios";
+import { useState } from 'react';
+import TableRow from './tablerow';
+// import InfoWrapper from './infowrapper';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+    state = {
+        a: 0
+    }
+
+    Change = () => {
+        this.setState({ a : 0 })
+    }
+
+    incer = () => {
+        this.setState({ a: this.state.a + 1 })
+    }
+    decre = () => {
+        this.setState({ a: this.state.a - 1 })
+    }
+
+    render() {
+        return (
+            <>
+            <div id='buttons'> 
+            <button onClick={() => { this.decre() }} className='btn1'> - </button> <p id='val'>{ this.state.a}</p>
+                <button onClick={() => { this.incer() }}  className='btn1'>+</button>
+                <button onClick={() =>{this.Change()}} className='btn2'>Reset</button>
+            </div>
+                
+
+            </>
+    )
+    }
+
+
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
